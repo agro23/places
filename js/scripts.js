@@ -22,12 +22,16 @@ function clearForm(){
 
 function showPlacesByName(){
   var placesList = "";
+  var killButtons = "";
   console.log ("These are the places you've visited:");
   for (i=0; i<places.length; i++){
+    // placesList = placesList + "<col-lg-11><p class='clickable' id='place" + i + "'>" + places[i].name.toUpperCase() + "</p>"+"<col-lg-1 id='kill'>X</col>";
     placesList = placesList + "<p class='clickable' id='place" + i + "'>" + places[i].name.toUpperCase() + "</p>";
-  }
+    killButtons = killButtons + '<button type="button" name="button" class="btn-danger killMe" id="kill'+i+'"' + '>X</button>';
+}
   console.log("places list: " + placesList);
   $("#viewport").html(placesList+"<br>");
+  $("#killButtons").html(killButtons + "<br");
 }
 
 function nameClicked(index){
@@ -60,6 +64,20 @@ function placeClicked(){
   });
 }
 
+function killClicked(){
+  $(".killMe").click(function(event){
+    event.preventDefault();
+    x = this.id[this.id.length -1]; // x is the index of the kill button
+    console.log("killButtons x: " + x);
+    console.log("Places String is: " + places[x].name);
+    console.log("Killbuttons is: " + killButtons);
+    places.splice(x, 1);
+    showPlacesByName();
+    killClicked();
+  });
+};
+// }
+
 $(document).ready(function() {
 
   $('form#place').submit(function(event){
@@ -68,5 +86,16 @@ $(document).ready(function() {
     showPlacesByName();
     clearForm(); // when we refactor we will use a reset function
     placeClicked();
+    killClicked();
   });
+
+  $(".killMe").click(function(event){
+    event.preventDefault();
+    x = this.id[this.id.length -1]; // x is the index of the kill button
+    console.log("killButtons x: " + x);
+    console.log("Places String is: " + places[x].name);
+    places.splice(x, 1);
+    showPlacesByName();
+  });
+
 });

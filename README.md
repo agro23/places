@@ -50,24 +50,22 @@ https://github.com/mikealbers/address-book
 
 * Show the list of places and show whole record when clicked - X
 
-* format appearance
+* format appearance -X
 
 * indicate what is a link via css - X
 
 * Validate input of city name
 
-* Show user a menu of possible choices:
-  * Add place to list
-  * Show list by Name
-  * Show place by name
-  * Delete place from list
-  * Edit place in list
+* User Can:
+  * Add place to list - X
+  * Show place by name - X
+  * Delete place from list - X
 
-* Activate each choice
+* Activate each choice - X
 
 * Validate all form input
 
-* Make the HTML pretty
+* Make the HTML pretty - X
 
 * Refactor and clean up code
 

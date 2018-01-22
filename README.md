@@ -15,13 +15,29 @@ https://github.com/mikealbers/address-book
 
 ## Rules for the Address book assignment
 
-* Create a website where you can keep track of all the places you've been. Each destination should be an object with multiple properties, like location, landmarks, time of year, notes, etc. Display those properties when a user clicks on a place's name. Complete the business logic for your place object first, before tackling the user interface.
+* Create a website where you can keep track of all the places you've been.
+* Each destination should be an object with multiple properties:
+    * location
+    * visited
+    * date visited
+    * landmarks
+    * (season) time of year
+    * notes
+* Display those properties when a user clicks on a place's name.
+
+* Complete the business logic for the place object first, before tackling the user interface.
 
 ## Methodology
 
 ### _The following specs are included in the program:_
 
-TBD
+* Business logic for the Place object - X
+
+* Establish a sample place as a new instance of the Place object - X
+
+* Display the .name property to the console - X
+
+* Make and fill a second object. <-- 
 
 * Refactor and clean up code
 

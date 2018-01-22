@@ -1,0 +1,71 @@
+body {
+  background-image: url(http://www.publicdomainpictures.net/pictures/130000/velka/america-globe-1441194708QFY.jpg);
+  background-repeat: no-repeat;
+}
+
+.sideview h2 {
+  text-align: center;
+}
+
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  padding-right: 1em;
+}
+
+.container {
+  margin-top: 6em;
+}
+
+
+.clickable:hover{
+  text-decoration: underline;
+}
+
+.sideview {
+  min-height: 100%;
+}
+
+
+#place input {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.clickable {
+  margin-bottom: 0;
+}
+
+/*.col-mark {
+  min-height: 100%;
+}*/
+
+
+.form-group{
+  margin: 1em;
+  padding: 1em;
+}
+
+#recordView {
+  padding: 1em;
+  margin: 1em;
+}
+
+.rec {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+#viewport {
+  margin-right: 1em;
+  padding-right: 1em;
+}
+
+
+.form-control{
+  /*margin: 1em;*/
+  /*padding: 1em;*/
+}

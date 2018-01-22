@@ -10,22 +10,48 @@
   </head>
   <body>
     <div class="container">
+
+      <div class="row row-eq-height">
+        <div class="col-md-8 col-mark">
+
       <div class="well">
+
+        <h2>ENTER A PLACE YOU'VE VISITED:</h2>
+
         <form id="place" class="form-group">
-         <input id="name" type="text" name="name" value="" class="form-control">
-         <input id="date" type="text" name="date" value="" class="form-control">
-         <input id="landmark" type="text" name="landmark" value="" class="form-control">
-         <input id="season" type="text" name="season" value="" class="form-control">
-         <input id="note" type="text" name="note" value="" class="form-control">
-         <div class="panel">
+         <input id="name" type="text" name="name" value="" class="form-control" placeholder="City Name" required>
+         <input id="date" type="text" name="date" value="" class="form-control" placeholder="Enter the date you visited" required>
+         <input id="landmark" type="text" name="landmark" value="" class="form-control" placeholder="Enter some landmarks you saw separated by commas" required>
+         <input id="season" type="text" name="season" value="" class="form-control" placeholder="How about a drop down of seasons" required>
+         <input id="note" type="text area" name="note" value="" class="form-control" placeholder="Anything else you want to say about the place?" required>
+         <div>
            <button class="btn btn-primary" type="submit" name="button">Submit</button>
          </div>
         </form>
       </div>
-      <div class="well" id="viewport">
-      </div>
-      <div class="well" id="recordView">
-      </div>
+
+        </div><!-- end col-->
+
+        <div class="well col-md-4 col-mark sideview">
+          <div>
+            <h2>Locations List:</h2>
+          </div>
+            <div id="viewport">
+          </div>
+        </div><!-- end col-->
+
+      </div> <!-- end row -->
+
+      <div class="row">
+
+          <div class="well rec" >
+            <h2>Places</h2>
+            <div id="recordView">
+            </div>
+          </div>
+
+      </div> <!-- end row -->
+
     </div>
   </body>
 </html>

@@ -48,9 +48,11 @@ https://github.com/mikealbers/address-book
 
 * Show list of entered places names only, all in uppercase. - X
 
-* Show the list of places and show whole record when clicked - x
+* Show the list of places and show whole record when clicked - X
 
 * format appearance
+
+* indicate what is a link via css - X
 
 * Validate input of city name
 

@@ -20,30 +20,14 @@ function clearForm(){
   $("#note").val("");
 }
 
-// function showPlaces(){
-//   var placesList = "";
-//   console.log ("These are the places you've visited:");
-//   for (i=0; i<places.length; i++){
-//     placesList = placesList + places[i].name + "<br>";
-//     placesList = placesList + places[i].date + "<br>"
-//     placesList = placesList + places[i].landmark + "<br>"
-//     placesList = placesList + places[i].season + "<br>"
-//     placesList = placesList + places[i].note + "<br>"
-//     placesList = placesList + "* * * * *" + "<br>"
-//   }
-//   $("#viewport").html(placesList+"<br>");
-// }
-
 function showPlacesByName(){
   var placesList = "";
   console.log ("These are the places you've visited:");
   for (i=0; i<places.length; i++){
-    placesList = placesList + "<p class='clickable' id='place" + i + "'>" + places[i].name.toUpperCase() + "</p><br>";
+    placesList = placesList + "<p class='clickable' id='place" + i + "'>" + places[i].name.toUpperCase() + "</p>";
   }
   console.log("places list: " + placesList);
   $("#viewport").html(placesList+"<br>");
-  // loop
-  // get list element and show it
 }
 
 function nameClicked(index){
@@ -62,14 +46,18 @@ function addPlaceToList (index, name, date, landmark, season, note) { // input v
   console.log("Added: " + myPlace.name);
 }
 
-
-function sniffer(){
+function placeClicked(){
   $(".clickable").click(function(event){
-      event.preventDefault();
-      x = this.id[this.id.length -1];
-      // alert("places n = " + places[x].name);
-      $('#recordView').html(places[x].name);
-    });
+    event.preventDefault();
+    x = this.id[this.id.length -1];
+    var record = "";
+      record = record + places[x].name + "<br>"
+      record = record + places[x].date + "<br>"
+      record = record + places[x].landmark + "<br>"
+      record = record + places[x].season + "<br>"
+      record = record + places[x].note + "<br>"
+    $('#recordView').html(record);
+  });
 }
 
 $(document).ready(function() {
@@ -77,12 +65,8 @@ $(document).ready(function() {
   $('form#place').submit(function(event){
     event.preventDefault();
     addPlaceToList($("#name").val(), $("#date").val(), $("#landmark").val(), $("#season").val(), $("#note").val());
-    // showPlaces();
     showPlacesByName();
-    clearForm();
-    sniffer();
-
-
-
+    clearForm(); // when we refactor we will use a reset function
+    placeClicked();
   });
 });

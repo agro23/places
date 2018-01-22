@@ -18,7 +18,6 @@ https://github.com/mikealbers/address-book
 * Create a website where you can keep track of all the places you've been.
 * Each destination should be an object with multiple properties:
     * location
-    * visited
     * date visited
     * landmarks
     * (season) time of year
@@ -37,7 +36,30 @@ https://github.com/mikealbers/address-book
 
 * Display the .name property to the console - X
 
-* Make and fill a second object. <-- 
+* Make and fill a second object. - X
+
+* Make array of locations - X
+
+* Create a function to add a Location object to the array - X
+
+* Empty form on submit - X
+
+* Show a list of the entered places - X
+
+* Show the list of places as links and show the linked to place when click
+
+* format appearance
+
+* Show user a menu of possible choices:
+  * Add place to list
+  * Show list by Name
+  * Show place by name
+  * Delete place from list
+  * Edit place in list
+
+* Activate each choice
+
+* Make the HTML pretty
 
 * Refactor and clean up code
 

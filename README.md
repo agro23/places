@@ -46,9 +46,13 @@ https://github.com/mikealbers/address-book
 
 * Show a list of the entered places - X
 
-* Show the list of places as links and show the linked to place when click
+* Show list of entered places names only, all in uppercase. - X
+
+* Show the list of places and show whole record when clicked - x
 
 * format appearance
+
+* Validate input of city name
 
 * Show user a menu of possible choices:
   * Add place to list
@@ -58,6 +62,8 @@ https://github.com/mikealbers/address-book
   * Edit place in list
 
 * Activate each choice
+
+* Validate all form input
 
 * Make the HTML pretty
 
